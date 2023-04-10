@@ -1,6 +1,7 @@
-import { FC } from "react";
-import { Outlet } from "react-router-dom";
-import { AuthProvider } from "@/hooks/useAuth";
+import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import { AuthProvider } from '@/hooks/useAuth';
 
 const App: FC = () => {
   return (

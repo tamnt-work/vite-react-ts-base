@@ -1,6 +1,7 @@
-import { FC } from "react";
-import GuardAuth from "@/middleware/guard-auth";
-import { GuardAccess } from "@/enums/guard-access";
+import { FC } from 'react';
+
+import { GuardAccess } from '@/enums/guard-access';
+import { GuardAuth } from '@/middleware/guard-auth';
 
 const RegisterPage: FC = () => {
   return (

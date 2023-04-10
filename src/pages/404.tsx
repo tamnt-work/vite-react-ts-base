@@ -1,5 +1,4 @@
-import { FC } from "react";
-import { useRouteError } from "react-router-dom";
+import { FC } from 'react';
 
 const NotFoundPage: FC = () => {
   return (

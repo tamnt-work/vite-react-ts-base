@@ -1,7 +1,8 @@
-import { FC } from "react";
-import { useTranslation } from "react-i18next";
-import GuardAuth from "@/middleware/guard-auth";
-import { GuardAccess } from "@/enums/guard-access";
+import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { GuardAccess } from '@/enums/guard-access';
+import { GuardAuth } from '@/middleware/guard-auth';
 
 const HomePage: FC = () => {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ const HomePage: FC = () => {
   return (
     <GuardAuth type={GuardAccess.Auth}>
       <div>
-        <h1>{t("Welcome to React")}</h1>
+        <h1>{t('Welcome to React')}</h1>
       </div>
     </GuardAuth>
   );

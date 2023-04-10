@@ -1,9 +1,10 @@
-import { createContext, FC, useContext, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { ROUTE_PAGE } from "@/constants/route-page";
-import AuthModel from "@/dto/auth/auth.model";
-import { authAtom } from "@/store/atom/auth";
+import { createContext, FC, useContext, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+
+import { ROUTE_PAGE } from '@/constants/route-page';
+import { AuthModel } from '@/dto/auth/auth.model';
+import { authAtom } from '@/store/atom/auth';
 
 interface AuthContext {
   user: AuthModel | null;
@@ -12,8 +13,12 @@ interface AuthContext {
 }
 const AuthContext = createContext<AuthContext>({
   user: null,
-  login: () => {},
-  logout: () => {},
+  login: () => {
+    return;
+  },
+  logout: () => {
+    return;
+  },
 });
 
 interface Props {
@@ -38,10 +43,7 @@ export const AuthProvider: FC<Props> = ({ children }) => {
     navigate(ROUTE_PAGE.LOGIN, { replace: true });
   };
 
-  const value = useMemo(
-    () => ({ user: authStore.user, login, logout }),
-    [authStore]
-  );
+  const value = useMemo(() => ({ user: authStore.user, login, logout }), [authStore]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

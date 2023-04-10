@@ -1,9 +1,10 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
-import AuthModel from "@/dto/auth/auth.model";
-import { useAuth } from "@/hooks/useAuth";
-import GuardAuth from "@/middleware/guard-auth";
-import { GuardAccess } from "@/enums/guard-access";
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+
+import { AuthModel } from '@/dto/auth/auth.model';
+import { GuardAccess } from '@/enums/guard-access';
+import { useAuth } from '@/hooks/useAuth';
+import { GuardAuth } from '@/middleware/guard-auth';
 
 const LoginPage: FC = () => {
   const { login } = useAuth();

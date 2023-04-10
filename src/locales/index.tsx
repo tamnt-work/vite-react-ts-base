@@ -1,16 +1,16 @@
-import i18n from "i18next";
-import en from "./en.json";
+import { use } from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-import { initReactI18next } from "react-i18next";
+import ja from './ja.json';
 
-i18n.use(initReactI18next).init({
+use(initReactI18next).init({
   resources: {
-    en: {
-      translation: en,
+    ja: {
+      translation: ja,
     },
   },
-  lng: "en",
-  fallbackLng: "en",
+  lng: process.env.LOCALE || 'ja',
+  fallbackLng: process.env.LOCALE || 'ja',
   interpolation: {
     escapeValue: false,
   },

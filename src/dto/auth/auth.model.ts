@@ -1,8 +1,8 @@
-export default class AuthModel {
-  id: string = "";
-  firstName: string = "";
-  lastName: string = "";
-  email: string = "";
+export class AuthModel {
+  id = '';
+  firstName = '';
+  lastName = '';
+  email = '';
 
   constructor(data?: Partial<AuthModel>) {
     Object.assign(this, data);

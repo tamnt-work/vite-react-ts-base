@@ -1,4 +1,4 @@
 export enum GuardAccess {
-  Auth = "auth",
-  Guest = "guest",
+  Auth = 'auth',
+  Guest = 'guest',
 }
