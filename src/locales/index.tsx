@@ -9,8 +9,8 @@ use(initReactI18next).init({
       translation: ja,
     },
   },
-  lng: process.env.LOCALE || 'ja',
-  fallbackLng: process.env.LOCALE || 'ja',
+  lng: import.meta.env.VITE_LOCALE || 'ja',
+  fallbackLng: import.meta.env.VITE_LOCALE || 'ja',
   interpolation: {
     escapeValue: false,
   },

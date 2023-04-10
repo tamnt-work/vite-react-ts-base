@@ -2,8 +2,8 @@ import { createContext, FC, useContext, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
+import { AuthModel } from '@/app/auth/auth.model';
 import { ROUTE_PAGE } from '@/constants/route-page';
-import { AuthModel } from '@/dto/auth/auth.model';
 import { authAtom } from '@/store/atom/auth';
 
 interface AuthContext {
