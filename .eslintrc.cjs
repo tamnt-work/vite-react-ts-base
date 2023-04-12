@@ -37,6 +37,7 @@ module.exports = {
         project: path.resolve(__dirname, './tsconfig.json'),
       },
     },
+    'import/core-modules': ['virtual:windi.css'],
   },
   env: {
     browser: true,
@@ -61,5 +62,6 @@ module.exports = {
       },
     ],
     'react-hooks/exhaustive-deps': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 };
